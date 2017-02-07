@@ -13,6 +13,19 @@ import styled from 'styled-components';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import withProgressBar from 'components/ProgressBar';
+import moment from 'moment';
+import 'moment/locale/fr';
+moment.locale('fr');
+console.log(moment.locale()); // en
+console.log(moment.locale('fr')); // en
+console.log(moment.locale('fr')); // en
+/*
+ import 'moment/src/locale/fr'; // works but Jest fails with "Unexpected token import"
+ moment.locale('fr');
+ console.log(moment.locale()); // fr
+ console.log(moment.locale('fr')); // fr
+ console.log(moment.locale('fr')); // fr
+*/
 
 const AppWrapper = styled.div`
   max-width: calc(768px + 16px * 2);
