@@ -75,6 +75,7 @@ module.exports = (options) => ({
       },
     }),
     new webpack.NamedModulesPlugin(),
+    new webpack.ContextReplacementPlugin(/moment[\\/]locale$/, /^\.\/en$/),
   ]),
   resolve: {
     modules: ['app', 'node_modules'],
@@ -85,8 +86,8 @@ module.exports = (options) => ({
     ],
     mainFields: [
       'browser',
-      'jsnext:main',
       'main',
+      'jsnext:main',
     ],
   },
   devtool: options.devtool,

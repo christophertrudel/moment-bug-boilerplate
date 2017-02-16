@@ -178,6 +178,8 @@
     "include": [
       "core-js",
       "lodash",
+      "moment",
+      "moment/locale/fr",
       "eventsource-polyfill"
     ]
   },
